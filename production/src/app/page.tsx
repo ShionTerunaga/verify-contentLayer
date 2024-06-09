@@ -5,11 +5,5 @@ export default function Home() {
 
     console.log(posts)
 
-    return (
-        <>
-            {posts.map((item, index) => (
-                <div key={index}>{item.title}</div>
-            ))}
-        </>
-    )
+    return <div dangerouslySetInnerHTML={{ __html: posts[0].body.html }} />
 }
